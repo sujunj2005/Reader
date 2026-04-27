@@ -1,4 +1,4 @@
 from .database import Base
+from .crawler.models import Source, Novel, Chapter, CrawlJob
 
-# Global models will be imported here
-__all__ = ["Base"]
+__all__ = ["Base", "Source", "Novel", "Chapter", "CrawlJob"]
