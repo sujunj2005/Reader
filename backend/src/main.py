@@ -6,6 +6,7 @@ from .crawler.router import router as crawler_router
 from .crawler.engine.scheduler import scheduler
 from .importer.router import router as importer_router
 from .reading.router import router as reading_router
+from .bookshelf.router import router as bookshelf_router
 from .database import async_session_maker
 
 settings = get_settings()
@@ -30,6 +31,7 @@ app.include_router(auth_router)
 app.include_router(crawler_router)
 app.include_router(importer_router)
 app.include_router(reading_router)
+app.include_router(bookshelf_router)
 
 
 @app.on_event("startup")

@@ -32,6 +32,18 @@ const routes = [
     component: () => import('../views/Reader.vue'),
     meta: { requiresAuth: true },
   },
+  {
+    path: '/bookshelf',
+    name: 'Bookshelf',
+    component: () => import('../views/Bookshelf.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: () => import('../views/Search.vue'),
+    meta: { requiresAuth: true },
+  },
 ]
 
 const router = createRouter({
