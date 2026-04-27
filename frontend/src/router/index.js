@@ -20,6 +20,18 @@ const routes = [
     component: () => import('../views/Home.vue'),
     meta: { requiresAuth: true },
   },
+  {
+    path: '/novel/:novelId',
+    name: 'NovelDetail',
+    component: () => import('../views/NovelDetail.vue'),
+    meta: { requiresAuth: true },
+  },
+  {
+    path: '/reader/:novelId/:chapterId?',
+    name: 'Reader',
+    component: () => import('../views/Reader.vue'),
+    meta: { requiresAuth: true },
+  },
 ]
 
 const router = createRouter({
