@@ -4,6 +4,7 @@ from .config import get_settings
 from .auth.router import router as auth_router
 from .crawler.router import router as crawler_router
 from .crawler.engine.scheduler import scheduler
+from .importer.router import router as importer_router
 from .database import async_session_maker
 
 settings = get_settings()
@@ -26,6 +27,7 @@ app.add_middleware(
 # Include routers
 app.include_router(auth_router)
 app.include_router(crawler_router)
+app.include_router(importer_router)
 
 
 @app.on_event("startup")
